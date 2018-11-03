@@ -1,2 +1,1 @@
-# TodoApp
-To-Do Application (React.js)
+# Todo App (React.js)
