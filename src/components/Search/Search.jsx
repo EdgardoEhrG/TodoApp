@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export default class Search extends React.Component {
+/* Styles */
+import "./search.scss"
+
+export default class Search extends Component {
     render() {
         return (
-            <input placeholder="Search" />
+            <input className="form-control search-input" placeholder="Search" />
         )
     }
 }
