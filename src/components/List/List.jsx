@@ -6,14 +6,17 @@ import ListItem from "../list-item/list-item";
 /* Styles */
 import "./list.scss";
 
-const List = ({ todoData }) => {
+const List = ({ todoData, onDeleted, onToggleImportant, onToggleDone }) => {
     const elements = todoData.map((item) => {
 
-        const { id, label, important } = item;
+        const { id, label, important, done } = item;
 
         return (
             <li key={id} className="list-group-item">
-                <ListItem label={label} important={important} />
+                <ListItem label={label} important={important} done={done}
+                onDeleted={() => onDeleted(id) }
+                onToggleImportant={() => onToggleImportant(id)}
+                onToggleDone={() => onToggleDone(id) } />
             </li>
         );
     });
