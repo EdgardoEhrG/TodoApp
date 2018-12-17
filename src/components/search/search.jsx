@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 /* Styles */
-import "./search.scss"
+import "./search.scss";
 
 export default class Search extends Component {
 

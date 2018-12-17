@@ -7,6 +7,8 @@ export default class ListItem extends Component {
     render() {
         const { label, important, done, onDeleted, onToggleImportant, onToggleDone } = this.props;
 
+        /* ================ Classes ================ */
+
         let classNames = 'todo-list-item';
 
         if (done) {
@@ -16,6 +18,8 @@ export default class ListItem extends Component {
         if (important) {
             classNames += ' important';
         }
+
+        /* ================ Markup ================ */
 
         return (
             <span className={classNames}>

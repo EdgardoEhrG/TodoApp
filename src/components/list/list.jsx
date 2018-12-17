@@ -3,9 +3,6 @@ import React from 'react';
 /* Components */
 import ListItem from "../list-item/list-item";
 
-/* Styles */
-import "./list.scss";
-
 const List = ({ todoData, onDeleted, onToggleImportant, onToggleDone }) => {
     const elements = todoData.map((item) => {
 

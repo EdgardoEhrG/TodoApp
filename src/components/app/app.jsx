@@ -13,6 +13,8 @@ import "./app.scss";
 
 export default class App extends Component {
 
+    /* ================ Properties ================ */
+
     maxId = 100;
 
     /* ================ State ================ */
