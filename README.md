@@ -2,7 +2,11 @@
 
 Task management.
 
-> React.js || Sass (SCSS) || Bootstrap 3
+> React.js
+
+> Sass (SCSS)
+
+> Bootstrap 3
 
 ## ToDo
 
