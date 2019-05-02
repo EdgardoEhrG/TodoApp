@@ -10,5 +10,5 @@ Task management.
 
 ## ToDo
 
-⋅⋅* To add classNames
-⋅⋅* Usin' LocalStorage
+* To add classNames
+* Usin' LocalStorage
