@@ -33,11 +33,11 @@ export default class ItemFormAdd extends Component {
         const { label } = this.state;
         return (
             <form className="item-add-form d-flex" onSubmit={this.onSubmit}>
-                <input type="text" 
+                <input type="text"
                     className="form-control"
+                    value={label}
                     onChange={this.onLabelChange}
                     placeholder="What needs to be done?"
-                    value={label}
                 />
                 <button className="btn btn-outline-secondary">Add Item</button>
             </form>

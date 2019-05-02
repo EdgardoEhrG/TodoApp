@@ -24,11 +24,11 @@ export default class Search extends Component {
     render() {
         const { term } = this.state;
         return (
-            <input 
+            <input
                 className="form-control search-input"
-                placeholder="Search"
                 value={term}
                 onChange={this.onSearchChange}
+                placeholder="Search"
             />
         )
     }

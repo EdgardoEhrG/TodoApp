@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 /* Components */
-
 import AppHeader from "../app-header/app-header";
 import Search from "../search/search";
 import List from "../list/list";
@@ -13,20 +12,16 @@ import "./app.scss";
 
 export default class App extends Component {
 
-    /* ================ Properties ================ */
+    /* ================ Static Properties ================ */
 
     maxId = 100;
 
     /* ================ State ================ */
 
     state = {
-        todoData: [
-            this.createTodoItem('Learn React'),
-            this.createTodoItem('Learn Redux'),
-            this.createTodoItem('Learn Next')
-        ],
+        todoData: [],
         term: '',
-        filter: 'all'  // active, all, done
+        filter: 'all'  // active, all (default) , done
     }
 
     /* ================ Events ================ */
@@ -44,7 +39,7 @@ export default class App extends Component {
         this.setState(({ todoData }) => {
             const idx = todoData.findIndex((el) => el.id === id);
 
-            const newArray = [ 
+            const newArray = [
                 ...todoData.slice(0, idx),
                 ...todoData.slice(idx + 1)
             ];
@@ -74,7 +69,7 @@ export default class App extends Component {
             const newItem = { ...oldItem, [property]: !oldItem[property] };
 
             // 2. Construct New Array
-            return [ 
+            return [
                 ...arr.slice(0, idx),
                 newItem,
                 ...arr.slice(idx + 1)
@@ -123,7 +118,7 @@ export default class App extends Component {
                 return items.filter((item) => !item.done);
             case 'done':
                 return items.filter((item) => item.done);
-            default: 
+            default:
                 return items;
         }
     }
@@ -142,7 +137,7 @@ export default class App extends Component {
                     <Search onSearchChange={this.onSearchChange} />
                     <ItemStatusFilter filter={filter} onFilterChange={this.onFilterChange} />
                 </div>
-                <List 
+                <List
                     todoData={ visibleItems }
                     onDeleted={ this.deleteItem }
                     onToggleImportant={ this.onToggleImportant }
