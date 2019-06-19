@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-/* Styles */
 import "./search.scss";
 
 export default class Search extends Component {
@@ -11,7 +10,7 @@ export default class Search extends Component {
         term: ''
     }
 
-    /* ================ Events ================ */
+    /* ================ Handlers ================ */
 
     onSearchChange = (e) => {
         const term = e.target.value;

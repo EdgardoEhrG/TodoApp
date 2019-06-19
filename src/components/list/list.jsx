@@ -1,6 +1,5 @@
 import React from 'react';
 
-/* Components */
 import ListItem from "../list-item/list-item";
 
 const List = ({ todoData, onDeleted, onToggleImportant, onToggleDone }) => {
@@ -11,10 +10,12 @@ const List = ({ todoData, onDeleted, onToggleImportant, onToggleDone }) => {
         return (
             <li key={id} className="list-group-item">
                 <ListItem
-                    label={label} important={important} done={done}
-                    onDeleted={() => onDeleted(id) }
+                    label={label}
+                    important={important}
+                    done={done}
+                    onDeleted={() => onDeleted(id)}
                     onToggleImportant={() => onToggleImportant(id)}
-                    onToggleDone={() => onToggleDone(id) }
+                    onToggleDone={() => onToggleDone(id)}
                 />
             </li>
         );

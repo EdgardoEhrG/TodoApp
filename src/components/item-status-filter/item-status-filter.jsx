@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import classNames from 'classnames';
+
 export default class ItemStatusFilter extends Component {
 
     buttons = [
@@ -14,10 +16,12 @@ export default class ItemStatusFilter extends Component {
 
         const buttons = this.buttons.map(({ name, label }) => {
             const isActive = filter === name;
-            const clazz = isActive ? 'btn-info' : 'btn-outline-secondary';
             return (
                 <button
-                    className={`btn ${clazz}`}
+                    className={classNames('btn', {
+                        'btn-info': isActive,
+                        'btn-outline-secondary': !isActive
+                    })}
                     key={name}
                     onClick={() => onFilterChange(name)}
                 >{label}</button>

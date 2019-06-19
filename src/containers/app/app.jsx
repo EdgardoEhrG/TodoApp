@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 
-/* Components */
-import AppHeader from "../app-header/app-header";
-import Search from "../search/search";
-import List from "../list/list";
-import ItemStatusFilter from "../item-status-filter/item-status-filter";
-import ItemAddForm from "../item-add-form/item-add-form";
+import AppHeader from "../../components/app-header/app-header";
+import Search from "../../components/search/search";
+import List from "../../components/list/list";
+import ItemStatusFilter from "../../components/item-status-filter/item-status-filter";
+import ItemAddForm from "../../components/item-add-form/item-add-form";
 
-/* Styles */
 import "./app.scss";
 
 export default class App extends Component {
@@ -24,7 +22,7 @@ export default class App extends Component {
         filter: 'all'  // active, all (default) , done
     }
 
-    /* ================ Events ================ */
+    /* ================ Handlers ================ */
 
     createTodoItem(label) {
         return {

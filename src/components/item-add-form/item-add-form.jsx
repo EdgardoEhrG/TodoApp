@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-/* Styles */
 import "./item-add-form.scss";
 
 export default class ItemFormAdd extends Component {
@@ -11,7 +10,7 @@ export default class ItemFormAdd extends Component {
         label: ''
     }
 
-    /* ================ Events ================ */
+    /* ================ Handlers ================ */
 
     onLabelChange = (e) => {
         this.setState({

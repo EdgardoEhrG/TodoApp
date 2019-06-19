@@ -7,8 +7,3 @@ Task management.
 > Sass (SCSS)
 
 > Bootstrap 3
-
-## ToDo
-
-* To add classNames
-* Usin' LocalStorage

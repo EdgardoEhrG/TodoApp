@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-/* Styles */
 import "./app-header.scss";
 
 export default class AppHeader extends Component {
