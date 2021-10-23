@@ -1,45 +1,45 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 import "./item-add-form.scss";
 
 export default class ItemFormAdd extends Component {
+  /* ================ State ================ */
 
-    /* ================ State ================ */
+  state = {
+    label: "",
+  };
 
-    state = {
-        label: ''
-    }
+  /* ================ Handlers ================ */
 
-    /* ================ Handlers ================ */
+  onLabelChange = (e) => {
+    this.setState({
+      label: e.target.value,
+    });
+  };
 
-    onLabelChange = (e) => {
-        this.setState({
-            label: e.target.value
-        });
-    }
+  onSubmit = (e) => {
+    e.preventDefault();
+    this.props.onItemAdded(this.state.label);
+    this.setState({
+      label: "",
+    });
+  };
 
-    onSubmit = (e) => {
-        e.preventDefault();
-        this.props.onItemAdded(this.state.label);
-        this.setState({
-            label: ''
-        })
-    }
+  /* ================ Render ================ */
 
-    /* ================ Render ================ */
-
-    render() {
-        const { label } = this.state;
-        return (
-            <form className="item-add-form d-flex" onSubmit={this.onSubmit}>
-                <input type="text"
-                    className="form-control"
-                    value={label}
-                    onChange={this.onLabelChange}
-                    placeholder="What needs to be done?"
-                />
-                <button className="btn btn-outline-secondary">Add Item</button>
-            </form>
-        )
-    }
+  render() {
+    const { label } = this.state;
+    return (
+      <form className="item-add-form d-flex" onSubmit={this.onSubmit}>
+        <input
+          type="text"
+          className="form-control"
+          value={label}
+          onChange={this.onLabelChange}
+          placeholder="What needs to be done?"
+        />
+        <button className="btn btn-outline-secondary">Add Item</button>
+      </form>
+    );
+  }
 }

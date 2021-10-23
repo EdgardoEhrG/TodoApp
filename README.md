@@ -1,9 +1,13 @@
 # Todo App
 
-Task management.
-
-> React.js
+> React
 
 > Sass (SCSS)
 
-> Bootstrap 3
+> Bootstrap
+
+## Useful elements
+
+- [ ] React old style
+- [ ] Filter logic
+- [ ] Search logic
